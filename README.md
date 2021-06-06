@@ -1,3 +1,4 @@
+Rest Api для hh.ru
 
 https://api.hh.ru
 https://api.hh.ru/areas
