@@ -1,0 +1,243 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "premium": {
+      "type": "boolean"
+    },
+    "name": {
+      "type": "string"
+    },
+    "department": {
+      "type": "null"
+    },
+    "has_test": {
+      "type": "boolean"
+    },
+    "response_letter_required": {
+      "type": "boolean"
+    },
+    "area": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "url"
+      ]
+    },
+    "salary": {
+      "type": "object",
+      "properties": {
+        "from": {
+          "type": "integer"
+        },
+        "to": {
+          "type": "integer"
+        },
+        "currency": {
+          "type": "string"
+        },
+        "gross": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "from",
+        "to",
+        "currency",
+        "gross"
+      ]
+    },
+    "type": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ]
+    },
+    "address": {
+      "type": "null"
+    },
+    "response_url": {
+      "type": "null"
+    },
+    "sort_point_distance": {
+      "type": "null"
+    },
+    "published_at": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "archived": {
+      "type": "boolean"
+    },
+    "apply_alternate_url": {
+      "type": "string"
+    },
+    "insider_interview": {
+      "type": "null"
+    },
+    "url": {
+      "type": "string"
+    },
+    "alternate_url": {
+      "type": "string"
+    },
+    "relations": {
+      "type": "array",
+      "items": {}
+    },
+    "employer": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "alternate_url": {
+          "type": "string"
+        },
+        "logo_urls": {
+          "type": "object",
+          "properties": {
+            "90": {
+              "type": "string"
+            },
+            "240": {
+              "type": "string"
+            },
+            "original": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "90",
+            "240",
+            "original"
+          ]
+        },
+        "vacancies_url": {
+          "type": "string"
+        },
+        "trusted": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "url",
+        "alternate_url",
+        "logo_urls",
+        "vacancies_url",
+        "trusted"
+      ]
+    },
+    "snippet": {
+      "type": "object",
+      "properties": {
+        "requirement": {
+          "type": "string"
+        },
+        "responsibility": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "requirement",
+        "responsibility"
+      ]
+    },
+    "contacts": {
+      "type": "null"
+    },
+    "schedule": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ]
+    },
+    "working_days": {
+      "type": "array",
+      "items": {}
+    },
+    "working_time_intervals": {
+      "type": "array",
+      "items": {}
+    },
+    "working_time_modes": {
+      "type": "array",
+      "items": {}
+    },
+    "accept_temporary": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "id",
+    "premium",
+    "name",
+    "department",
+    "has_test",
+    "response_letter_required",
+    "area",
+    "salary",
+    "type",
+    "address",
+    "response_url",
+    "sort_point_distance",
+    "published_at",
+    "created_at",
+    "archived",
+    "apply_alternate_url",
+    "insider_interview",
+    "url",
+    "alternate_url",
+    "relations",
+    "employer",
+    "snippet",
+    "contacts",
+    "schedule",
+    "working_days",
+    "working_time_intervals",
+    "working_time_modes",
+    "accept_temporary"
+  ]
+}

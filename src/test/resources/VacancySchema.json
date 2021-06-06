@@ -1,0 +1,554 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "premium": {
+      "type": "boolean"
+    },
+    "billing_type": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ]
+    },
+    "relations": {
+      "type": "array",
+      "items": {}
+    },
+    "name": {
+      "type": "string"
+    },
+    "insider_interview": {
+      "type": "null"
+    },
+    "response_letter_required": {
+      "type": "boolean"
+    },
+    "area": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "url"
+      ]
+    },
+    "salary": {
+      "type": "object",
+      "properties": {
+        "from": {
+          "type": "null"
+        },
+        "to": {
+          "type": "integer"
+        },
+        "currency": {
+          "type": "string"
+        },
+        "gross": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "from",
+        "to",
+        "currency",
+        "gross"
+      ]
+    },
+    "type": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ]
+    },
+    "address": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string"
+        },
+        "street": {
+          "type": "string"
+        },
+        "building": {
+          "type": "string"
+        },
+        "description": {
+          "type": "null"
+        },
+        "lat": {
+          "type": "number"
+        },
+        "lng": {
+          "type": "number"
+        },
+        "raw": {
+          "type": "string"
+        },
+        "metro": {
+          "type": "object",
+          "properties": {
+            "station_name": {
+              "type": "string"
+            },
+            "line_name": {
+              "type": "string"
+            },
+            "station_id": {
+              "type": "string"
+            },
+            "line_id": {
+              "type": "string"
+            },
+            "lat": {
+              "type": "number"
+            },
+            "lng": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "station_name",
+            "line_name",
+            "station_id",
+            "line_id",
+            "lat",
+            "lng"
+          ]
+        },
+        "metro_stations": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "station_name": {
+                  "type": "string"
+                },
+                "line_name": {
+                  "type": "string"
+                },
+                "station_id": {
+                  "type": "string"
+                },
+                "line_id": {
+                  "type": "string"
+                },
+                "lat": {
+                  "type": "number"
+                },
+                "lng": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "station_name",
+                "line_name",
+                "station_id",
+                "line_id",
+                "lat",
+                "lng"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "city",
+        "street",
+        "building",
+        "description",
+        "lat",
+        "lng",
+        "raw",
+        "metro",
+        "metro_stations"
+      ]
+    },
+    "allow_messages": {
+      "type": "boolean"
+    },
+    "site": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ]
+    },
+    "experience": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ]
+    },
+    "schedule": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ]
+    },
+    "employment": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ]
+    },
+    "department": {
+      "type": "null"
+    },
+    "contacts": {
+      "type": "null"
+    },
+    "description": {
+      "type": "string"
+    },
+    "branded_description": {
+      "type": "null"
+    },
+    "vacancy_constructor_template": {
+      "type": "null"
+    },
+    "key_skills": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        }
+      ]
+    },
+    "accept_handicapped": {
+      "type": "boolean"
+    },
+    "accept_kids": {
+      "type": "boolean"
+    },
+    "archived": {
+      "type": "boolean"
+    },
+    "response_url": {
+      "type": "null"
+    },
+    "specializations": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "profarea_id": {
+              "type": "string"
+            },
+            "profarea_name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "name",
+            "profarea_id",
+            "profarea_name"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "profarea_id": {
+              "type": "string"
+            },
+            "profarea_name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "name",
+            "profarea_id",
+            "profarea_name"
+          ]
+        }
+      ]
+    },
+    "code": {
+      "type": "null"
+    },
+    "hidden": {
+      "type": "boolean"
+    },
+    "quick_responses_allowed": {
+      "type": "boolean"
+    },
+    "driver_license_types": {
+      "type": "array",
+      "items": {}
+    },
+    "accept_incomplete_resumes": {
+      "type": "boolean"
+    },
+    "employer": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "alternate_url": {
+          "type": "string"
+        },
+        "logo_urls": {
+          "type": "object",
+          "properties": {
+            "original": {
+              "type": "string"
+            },
+            "240": {
+              "type": "string"
+            },
+            "90": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "original",
+            "240",
+            "90"
+          ]
+        },
+        "vacancies_url": {
+          "type": "string"
+        },
+        "trusted": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "url",
+        "alternate_url",
+        "logo_urls",
+        "vacancies_url",
+        "trusted"
+      ]
+    },
+    "published_at": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "negotiations_url": {
+      "type": "null"
+    },
+    "suitable_resumes_url": {
+      "type": "null"
+    },
+    "apply_alternate_url": {
+      "type": "string"
+    },
+    "has_test": {
+      "type": "boolean"
+    },
+    "test": {
+      "type": "null"
+    },
+    "alternate_url": {
+      "type": "string"
+    },
+    "working_days": {
+      "type": "array",
+      "items": {}
+    },
+    "working_time_intervals": {
+      "type": "array",
+      "items": {}
+    },
+    "working_time_modes": {
+      "type": "array",
+      "items": {}
+    },
+    "accept_temporary": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "id",
+    "premium",
+    "billing_type",
+    "relations",
+    "name",
+    "insider_interview",
+    "response_letter_required",
+    "area",
+    "salary",
+    "type",
+    "address",
+    "allow_messages",
+    "site",
+    "experience",
+    "schedule",
+    "employment",
+    "department",
+    "contacts",
+    "description",
+    "branded_description",
+    "vacancy_constructor_template",
+    "key_skills",
+    "accept_handicapped",
+    "accept_kids",
+    "archived",
+    "response_url",
+    "specializations",
+    "code",
+    "hidden",
+    "quick_responses_allowed",
+    "driver_license_types",
+    "accept_incomplete_resumes",
+    "employer",
+    "published_at",
+    "created_at",
+    "negotiations_url",
+    "suitable_resumes_url",
+    "apply_alternate_url",
+    "has_test",
+    "test",
+    "alternate_url",
+    "working_days",
+    "working_time_intervals",
+    "working_time_modes",
+    "accept_temporary"
+  ]
+}

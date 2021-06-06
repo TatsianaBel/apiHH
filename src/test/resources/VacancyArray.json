@@ -1,0 +1,526 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "premium": {
+            "type": "boolean"
+          },
+          "name": {
+            "type": "string"
+          },
+          "department": {
+            "type": "null"
+          },
+          "has_test": {
+            "type": "boolean"
+          },
+          "response_letter_required": {
+            "type": "boolean"
+          },
+          "area": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "enum": [
+                  "1002",
+                  "54"
+                ]
+              },
+              "name": {
+                "type": "string",
+                "enum": [
+                  "Минск",
+                  "Красноярск"
+                ]
+              },
+              "url": {
+                "type": "string",
+                "enum": [
+                  "https://api.hh.ru/areas/1002",
+                  "https://api.hh.ru/areas/54"
+                ]
+              }
+            },
+            "additionalProperties": true,
+            "required": [
+              "id",
+              "name",
+              "url"
+            ]
+          },
+          "salary": {
+            "type": "object",
+            "properties": {
+              "from": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "to": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "currency": {
+                "type": "string",
+                "enum": [
+                  "BYR",
+                  "USD",
+                  "EUR",
+                  "RUR",
+                  "UAH"
+                ]
+              },
+              "gross": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": true,
+            "required": [
+              "from",
+              "to",
+              "currency",
+              "gross"
+            ]
+          },
+          "type": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "enum": [
+                  "open",
+                  "closed",
+                  "anonymous",
+                  "direct"
+                ]
+              },
+              "name": {
+                "type": "string",
+                "enum": [
+                  "Открытая",
+                  "Закрытая",
+                  "Анонимная",
+                  "Рекламная"
+                ]
+              }
+            },
+            "additionalProperties": true,
+            "required": [
+              "id",
+              "name"
+            ]
+          },
+          "address": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "properties": {
+              "city": {
+                "type": "string"
+              },
+              "street": {
+                "type": "string"
+              },
+              "building": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "description": {
+                "type": "null"
+              },
+              "lat": {
+                "type": "number"
+              },
+              "lng": {
+                "type": "number"
+              },
+              "raw": {
+                "type": "string"
+              },
+              "metro": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "station_name": {
+                        "type": "string"
+                      },
+                      "line_name": {
+                        "type": "string"
+                      },
+                      "station_id": {
+                        "type": "string"
+                      },
+                      "line_id": {
+                        "type": "string"
+                      },
+                      "lat": {
+                        "type": "number"
+                      },
+                      "lng": {
+                        "type": "number"
+                      }
+                    },
+                    "additionalProperties": true,
+                    "required": [
+                      "station_name",
+                      "line_name",
+                      "station_id",
+                      "line_id",
+                      "lat",
+                      "lng"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "metro_stations": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "station_name": {
+                      "type": "string"
+                    },
+                    "line_name": {
+                      "type": "string"
+                    },
+                    "station_id": {
+                      "type": "string"
+                    },
+                    "line_id": {
+                      "type": "string"
+                    },
+                    "lat": {
+                      "type": "number"
+                    },
+                    "lng": {
+                      "type": "number"
+                    }
+                  },
+                  "additionalProperties": true,
+                  "required": [
+                    "station_name",
+                    "line_name",
+                    "station_id",
+                    "line_id",
+                    "lat",
+                    "lng"
+                  ]
+                },
+                "additionalItems": true
+              },
+              "id": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": true
+          },
+          "response_url": {
+            "type": "null"
+          },
+          "sort_point_distance": {
+            "type": "null"
+          },
+          "published_at": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string"
+          },
+          "archived": {
+            "type": "boolean"
+          },
+          "apply_alternate_url": {
+            "type": "string"
+          },
+          "insider_interview": {
+            "type": "null"
+          },
+          "url": {
+            "type": "string"
+          },
+          "alternate_url": {
+            "type": "string"
+          },
+          "relations": {
+            "type": "array",
+            "items": {
+              "items": {},
+              "additionalItems": true,
+              "additionalProperties": true
+            },
+            "additionalItems": true
+          },
+          "employer": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              },
+              "alternate_url": {
+                "type": "string"
+              },
+              "logo_urls": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "90": {
+                    "type": "string"
+                  },
+                  "240": {
+                    "type": "string"
+                  },
+                  "original": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": true,
+                "required": [
+                  "90",
+                  "240",
+                  "original"
+                ]
+              },
+              "vacancies_url": {
+                "type": "string"
+              },
+              "trusted": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": true,
+            "required": [
+              "id",
+              "name",
+              "url",
+              "alternate_url",
+              "logo_urls",
+              "vacancies_url",
+              "trusted"
+            ]
+          },
+          "snippet": {
+            "type": "object",
+            "properties": {
+              "requirement": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "responsibility": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "additionalProperties": true,
+            "required": [
+              "requirement",
+              "responsibility"
+            ]
+          },
+          "contacts": {
+            "type": "null"
+          },
+          "schedule": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "enum": [
+                  "fullDay",
+                  "remote",
+                  "flexible",
+                  "flyInFlyOut",
+                  "shift"
+                ]
+              },
+              "name": {
+                "type": "string",
+                "enum": [
+                  "Полный день",
+                  "Удаленная работа",
+                  "Гибкий график",
+                  "Вахтовый метод",
+                  "Сменный график"
+                ]
+              }
+            },
+            "additionalProperties": true,
+            "required": [
+              "id",
+              "name"
+            ]
+          },
+          "working_days": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": true,
+              "required": [
+                "id",
+                "name"
+              ]
+            },
+            "additionalItems": true
+          },
+          "working_time_intervals": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": true,
+              "required": [
+                "id",
+                "name"
+              ]
+            },
+            "additionalItems": true
+          },
+          "working_time_modes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": true,
+              "required": [
+                "id",
+                "name"
+              ]
+            },
+            "additionalItems": true
+          },
+          "accept_temporary": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": true,
+        "required": [
+          "id",
+          "premium",
+          "name",
+          "department",
+          "has_test",
+          "response_letter_required",
+          "area",
+          "salary",
+          "type",
+          "address",
+          "response_url",
+          "sort_point_distance",
+          "published_at",
+          "created_at",
+          "archived",
+          "apply_alternate_url",
+          "insider_interview",
+          "url",
+          "alternate_url",
+          "relations",
+          "employer",
+          "snippet",
+          "contacts",
+          "schedule",
+          "working_days",
+          "working_time_intervals",
+          "working_time_modes",
+          "accept_temporary"
+        ]
+      },
+      "additionalItems": true
+    },
+    "found": {
+      "type": "integer"
+    },
+    "pages": {
+      "type": "integer"
+    },
+    "per_page": {
+      "type": "integer"
+    },
+    "page": {
+      "type": "integer"
+    },
+    "clusters": {
+      "type": "null"
+    },
+    "arguments": {
+      "type": "null"
+    },
+    "alternate_url": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true,
+  "required": [
+    "items",
+    "found",
+    "pages",
+    "per_page",
+    "page",
+    "clusters",
+    "arguments",
+    "alternate_url"
+  ]
+}
