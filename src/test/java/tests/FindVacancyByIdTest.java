@@ -18,8 +18,7 @@ public class FindVacancyByIdTest {
     @DataProvider(name = "valid-data-id")
     public Object[][] dataProviderMethodValidId() {
         return new Object[][]{
-                {"44757578"},
-                {"data two"}
+                {"44757578"}
         };
     }
 

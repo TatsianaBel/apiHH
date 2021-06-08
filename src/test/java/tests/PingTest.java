@@ -1,4 +1,4 @@
-package drafttests;
+package tests;
 
 import adapter.BaseAdapter;
 import constants.EndPoints;
