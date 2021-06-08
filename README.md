@@ -8,6 +8,7 @@ This Framework is designed for Backend Testing of Webservices using Java with Re
 * TestNG
 * Maven
 * RestAssured
+* Allure
 
 *Project Structure:*
 
